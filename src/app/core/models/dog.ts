@@ -1,6 +1,7 @@
 import firebase from 'firebase';
 
 export interface Dog {
+  _id?: string;
   name: string;
   age: number;
   ownerName: string;
