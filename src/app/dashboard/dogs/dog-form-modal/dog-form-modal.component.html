@@ -1,0 +1,36 @@
+<h2 mat-dialog-title>Perrito en Adopción</h2>
+<mat-dialog-content>
+  <p>Por favor llena los campos con la información requerida.</p>
+  <form [formGroup]="dogForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre del Perrito</mat-label>
+      <input formControlName="name" matInput placeholder="Ex. Max">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Edad (meses) </mat-label>
+      <input formControlName="age" matInput placeholder="Ex. 24" type="number">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre de quien lo dá en adopción </mat-label>
+      <input formControlName="ownerName" matInput placeholder="Ex. Pedro Perez" type="text">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Teléfono de Contacto </mat-label>
+      <input formControlName="ownerContactNumber" matInput placeholder="Ex. (310)-1232222" type="number">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Ciudad </mat-label>
+      <input formControlName="city"  matInput placeholder="Ex. Bogotá" type="text">
+    </mat-form-field>
+
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+  <button mat-button (click)="addDog()">Agregar</button>
+</mat-dialog-actions>
