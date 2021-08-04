@@ -3,11 +3,4 @@
 <button mat-raised-button color="primary" (click)="showDogFormModal()">Tengo un Perrito en Adopción</button>
 <h3>Lista de Perritos en Adopción</h3>
 
-<ul>
-  <li *ngFor="let dog of dogs$ | async">
-    <mat-card>
-      <p> Nombre: {{dog.name }} </p>
-      <p> Edad: {{dog.age}}</p>
-    </mat-card>
-  </li>
-</ul>
+<app-dog-list [dogs$]="dogs$"></app-dog-list>

@@ -6,9 +6,10 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard.component';
 import { DogsComponent } from './dogs/dogs.component';
 import {SharedModule} from '../shared/shared.module';
-import { DogFormComponent } from './dogs/dog-form/dog-form.component';
 import { DogFormModalComponent } from './dogs/dog-form-modal/dog-form-modal.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { DogCardComponent } from './dogs/dog-card/dog-card.component';
+import { DogListComponent } from './dogs/dog-list/dog-list.component';
 
 
 @NgModule({
@@ -16,8 +17,9 @@ import {ReactiveFormsModule} from '@angular/forms';
     HomeComponent,
     DashboardComponent,
     DogsComponent,
-    DogFormComponent,
-    DogFormModalComponent
+    DogFormModalComponent,
+    DogCardComponent,
+    DogListComponent
   ],
   imports: [
     CommonModule,
