@@ -28,12 +28,11 @@ export class DogsService {
       }))
     );
   }
-/*
-  getAll(): Observable<Dog[]> {
 
-
-    return this.dogsItems$;
-  }*/
+  getById(id: string) {
+   return this.afs.doc(`${this.path}/${id}`).get()
+     .pipe(map(res => res.data()));
+  }
 
   add(dog: Dog) {
     console.log({dog})

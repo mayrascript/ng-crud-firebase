@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {MatDialogRef} from '@angular/material/dialog';
+import {Component, Inject, OnInit} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {DogsService} from '../../../core/services/dogs/dogs.service';
 
@@ -14,9 +14,15 @@ export class DogFormModalComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<DogFormModalComponent>,
               private fb: FormBuilder,
-              private dogsService: DogsService) { }
+              private dogsService: DogsService,
+              @Inject(MAT_DIALOG_DATA) public data?: {dogId?: string}) { }
 
   ngOnInit() {
+
+    const currentDog$ = this.data?.dogId ? this.dogsService.getById(this.data?.dogId): {};
+
+    console.log({dog: currentDog$});
+
     this.dogForm = this.fb.group(
       {
         name: ['', Validators.required],
