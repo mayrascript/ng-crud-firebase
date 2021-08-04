@@ -35,7 +35,6 @@ export class DogsService {
   }
 
   add(dog: Dog) {
-    console.log({dog})
     return this.dogsCollection.add({...dog, createdAt: firebase.firestore.FieldValue.serverTimestamp()})
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
@@ -46,7 +45,7 @@ export class DogsService {
   }
 
   update(id: string, item: Partial<Dog>) {
-    this.afs.doc(`${this.path}/${id}`).update(item);
+    return this.afs.doc(`${this.path}/${id}`).update({...item, updatedAt: firebase.firestore.FieldValue.serverTimestamp()});
   }
 
   remove(id: string) {
