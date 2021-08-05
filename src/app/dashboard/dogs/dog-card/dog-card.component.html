@@ -1,15 +1,24 @@
 <mat-card class="dog-card">
   <mat-card-header>
-    <mat-card-title> {{dog.name}}, {{dog.age}} meses de edad.</mat-card-title>
-    <mat-card-subtitle>{{dog.gender === gender.Female ? 'Hembra' : 'Macho'}}. Ubicado en {{dog.city}}</mat-card-subtitle>
+    <mat-card-title>
+      {{ dog.name }}, {{ dog.age }} meses de edad.</mat-card-title
+    >
+    <mat-card-subtitle
+      >{{ dog.gender === gender.Female ? "Hembra" : "Macho" }}. Ubicado en
+      {{ dog.city }}</mat-card-subtitle
+    >
   </mat-card-header>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <img
+    mat-card-image
+    src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+    alt="Photo of a Shiba Inu"
+  />
   <mat-card-content>
     <p>
-      Mi dueño/a temporal se llama {{dog.ownerName}} y su contacto es {{dog.ownerContactNumber}}.
+      Mi dueño/a temporal se llama {{ dog.ownerName }} y su contacto es
+      {{ dog.ownerContactNumber }}.
     </p>
-    <p>      Sobre mí: {{dog.description}}
-    </p>
+    <p>Sobre mí: {{ dog.description }}</p>
   </mat-card-content>
   <mat-card-actions>
     <button mat-button (click)="edit()">EDITAR</button>

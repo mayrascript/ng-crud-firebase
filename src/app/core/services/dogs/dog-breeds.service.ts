@@ -2,17 +2,16 @@ import { Injectable } from '@angular/core';
 
 import * as dogBreeds from 'src/assets/dog-breeds.json';
 
-import {Observable, of} from 'rxjs';
-import {map} from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DogBreedsService {
+  constructor() {}
 
-  constructor() { }
-
-  getAll(): Observable<string[]>{
-    return of(dogBreeds).pipe(map(res => res.dogs));
+  getAll(): Observable<string[]> {
+    return of(dogBreeds).pipe(map((res) => res.dogs));
   }
 }

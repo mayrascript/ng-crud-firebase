@@ -15,6 +15,6 @@ export interface Dog {
 }
 
 export enum GenderEnum {
-  Female= 'Female',
-  Male= 'Male',
+  Female = 'Female',
+  Male = 'Male',
 }

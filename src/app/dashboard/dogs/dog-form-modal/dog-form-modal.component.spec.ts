@@ -8,9 +8,8 @@ describe('DogFormModalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DogFormModalComponent ]
-    })
-    .compileComponents();
+      declarations: [DogFormModalComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

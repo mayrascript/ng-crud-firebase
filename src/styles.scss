@@ -1,18 +1,20 @@
-@import '~@angular/material/theming';
+@import "~@angular/material/theming";
 
 $custom-typography: mat-typography-config(
-  $font-family: 'Nunito Sans, monospace',
+  $font-family: "Nunito Sans, monospace",
   $headline: mat-typography-level(32px, 48px, 700),
-  $body-1: mat-typography-level(16px, 24px, 500)
+  $body-1: mat-typography-level(16px, 24px, 500),
 );
 
 @include mat-core($custom-typography);
 
-
-html, body { height: 100%; }
+html,
+body {
+  height: 100%;
+}
 body {
   margin: 0;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .full-width {
@@ -48,5 +50,3 @@ body {
 .flex {
   display: flex;
 }
-
-

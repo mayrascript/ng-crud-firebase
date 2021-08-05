@@ -3,6 +3,9 @@
 <div class="cards-container">
   <app-dog-card *ngFor="let dog of dogs$ | async" [dog]="dog"></app-dog-card>
   <div class="center-box" *ngIf="(dogs$ | async)?.length === 0">
-    <p>En este momento no hay perritos en adopción, si deseas agregar uno presiona en la opción "Deseo agregar un perro en adopción"</p>
+    <p>
+      En este momento no hay perritos en adopción, si deseas agregar uno
+      presiona en la opción "Deseo agregar un perro en adopción"
+    </p>
   </div>
 </div>
