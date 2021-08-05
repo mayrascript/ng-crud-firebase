@@ -1,0 +1,9 @@
+.gender-field {
+  height: 50px;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  .mat-radio-button {
+    margin-left: 1em;
+  }
+}
