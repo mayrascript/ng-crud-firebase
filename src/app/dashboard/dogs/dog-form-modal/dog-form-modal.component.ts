@@ -33,7 +33,7 @@ export class DogFormModalComponent implements OnInit {
         age: ['', Validators.required],
         gender: ['', Validators.required],
         breed: ['', Validators.required],
-        description: ['', Validators.required],
+        description: [''],
         ownerName: [ '', Validators.required],
         ownerContactNumber: ['', Validators.required],
         city: ['', Validators.required],
@@ -63,7 +63,6 @@ export class DogFormModalComponent implements OnInit {
       ? this.update(this.data?.dogId)
       // De lo contrario, queremos añadir un nuevo elemento
       : this.create();
-
   }
 
   closeModal() {

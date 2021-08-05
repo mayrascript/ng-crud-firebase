@@ -15,7 +15,7 @@
     <div class="full-width gender-field">
       <label>Género:</label>
 
-      <mat-radio-group  aria-label="Género">
+      <mat-radio-group formControlName="gender" aria-label="Género">
         <mat-radio-button [value]="genderEnum.Female">Femenino</mat-radio-button>
         <mat-radio-button [value]="genderEnum.Male">Masculino</mat-radio-button>
       </mat-radio-group>
@@ -23,7 +23,7 @@
 
     <mat-form-field class="full-width" appearance="fill">
       <mat-label>Raza</mat-label>
-      <mat-select>
+      <mat-select formControlName="breed">
         <mat-option *ngFor="let breed of breeds$ | async" [value]="breed">
           {{breed}}
         </mat-option>

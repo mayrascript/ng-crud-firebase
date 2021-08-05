@@ -1,0 +1,16 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1em;
+  background: #7b1fa2;
+  color: #fff;
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  a {
+    color: white;
+  }
+}

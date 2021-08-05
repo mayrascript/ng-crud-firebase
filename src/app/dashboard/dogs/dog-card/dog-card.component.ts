@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Dog} from '../../../core/models/dog';
+import {Dog, GenderEnum} from '../../../core/models/dog';
 import {DogsService} from '../../../core/services/dogs/dogs.service';
 import {DogFormModalComponent} from '../dog-form-modal/dog-form-modal.component';
 import {MatDialog} from '@angular/material/dialog';
@@ -11,6 +11,8 @@ import {MatDialog} from '@angular/material/dialog';
 })
 export class DogCardComponent implements OnInit {
   @Input() dog!: Dog;
+
+  gender = GenderEnum;
 
   constructor(private dialog: MatDialog,
               private dogsService: DogsService) { }

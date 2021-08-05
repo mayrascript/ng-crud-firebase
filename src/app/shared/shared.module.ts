@@ -9,6 +9,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatOptionModule} from '@angular/material/core';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [],
@@ -22,7 +24,9 @@ import {MatRadioModule} from '@angular/material/radio';
     MatSelectModule,
     MatOptionModule,
     MatAutocompleteModule,
-    MatRadioModule
+    MatRadioModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   exports: [
     MatButtonModule,
@@ -33,7 +37,9 @@ import {MatRadioModule} from '@angular/material/radio';
     MatSelectModule,
     MatOptionModule,
     MatAutocompleteModule,
-    MatRadioModule
+    MatRadioModule,
+    MatToolbarModule,
+    MatIconModule
   ]
 })
 export class SharedModule { }

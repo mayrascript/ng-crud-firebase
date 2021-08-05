@@ -1,6 +1,9 @@
-<h2>Sección de Perritos</h2>
+<div class="flex">
+  <h2 style="margin-bottom: 0">Sección de Perritos</h2>
+  <span class="spacer"></span>
+  <button mat-raised-button color="primary" (click)="showDogFormModal()">Tengo un Perrito en Adopción</button>
+</div>
 
-<button mat-raised-button color="primary" (click)="showDogFormModal()">Tengo un Perrito en Adopción</button>
-<h3>Lista de Perritos en Adopción</h3>
+<br>
 
 <app-dog-list [dogs$]="dogs$"></app-dog-list>
